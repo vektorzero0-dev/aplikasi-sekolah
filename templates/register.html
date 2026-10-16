@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrasi Akun Siswa</title>
+</head>
+<body style="font-family: Arial; padding: 40px;">
+    <h2>Registrasi Akun Siswa Baru</h2>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        <label>Nama Lengkap:</label><br>
+        <input type="text" name="full_name" required style="padding: 8px; width: 250px;"><br><br>
+        
+        <label>Kelas:</label><br>
+        <select name="kelas" required style="padding: 8px; width: 268px;">
+            <option value="Kelas X">Kelas X</option>
+            <option value="Kelas XI">Kelas XI</option>
+            <option value="Kelas XII">Kelas XII</option>
+        </select><br><br>
+
+        <label>Username:</label><br>
+        <input type="text" name="username" required style="padding: 8px; width: 250px;"><br><br>
+        
+        <label>Password:</label><br>
+        <input type="password" name="password" required style="padding: 8px; width: 250px;"><br><br>
+        
+        <button type="submit" style="padding: 10px 20px;">Daftar Sekarang</button>
+    </form>
+    <p>Sudah punya akun? <a href="/login">Login di sini</a></p>
+</body>
+</html>
