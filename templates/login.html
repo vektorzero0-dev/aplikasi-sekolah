@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Aplikasi</title>
+</head>
+<body style="font-family: Arial; padding: 40px;">
+    <h2>Login Akun</h2>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        <label>Username:</label><br>
+        <input type="text" name="username" required style="padding: 8px; width: 250px;"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password" required style="padding: 8px; width: 250px;"><br><br>
+
+        <button type="submit" style="padding: 10px 20px;">Masuk</button>
+    </form>
+    <p>Belum punya akun? <a href="/register">Daftar di sini</a></p>
+</body>
+</html>
